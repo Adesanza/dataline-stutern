@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict</title>
+    <link rel="shortcut icon" href="https://res.cloudinary.com/adesanza/image/upload/v1611150220/datalinelogo_ml1ufh.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/predict.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-light navbar-light fixed">
+        <a href="/"> <img src="https://res.cloudinary.com/adesanza/image/upload/v1611150220/datalinelogo_ml1ufh.svg" alt="" height="50px"> </a>
+    </nav>
+    <div class="sidebar">
+        <a class="active" href="#"><h5> Start</h5></a>
+    </div>
+    <div class="content">
+        <div class="container">
+            <h3 class="sales">Get your Sales Prediction</h3>
+            <form id="myForm">
+                <!-- <div class="row">
+                    <div class="col-md-3">
+                        <select name="product" id="food1">
+                            <option value="2 person">plantain</option>
+                            <option value="z_amazon">rice</option>
+                            <option value="family">yam</option>
+                            <option value="add_on">ate</option>
+                        </select>
+                        <input type="number" placeholder="calories" name="calories" id="food2" />
+                        <input type="number" placeholder="carbs" name="carbs" id="food3" />
+                    </div>
+                    <div class="col-md-3">
+                        <select name="time" id="food4">
+                            <option value="time_level_4">morning</option>
+                            <option value="time_level_5">afternoon</option>
+                            <option value="time_level_3">night</option>
+                        </select>
+                        <select name="dish" id="food5">
+                            <option value="fish">beans</option>
+                            <option value="veggie">rice</option>
+                            <option value="meat">yam</option>
+                            <option value="wine_and_dessert">yam</option>
+                        </select>
+                        <select name="heat" id="food6">
+                            <option value="optional_heat">beans</option>
+                            <option value="no_heat">rice</option>
+                            <option value="high">yam</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="number" placeholder="fat" name="fat" id="food7" />
+                        <input type="number" placeholder="Number of Ingredients" name="no_ingredients" id="food8" />
+                        <input type="number" placeholder="proteins" name="proteins" id="food9" />
+                    </div>
+                    <div class="col-md-3">
+                        <select name="proteins_class" id="food10">
+                            <option value="fish">morning</option>
+                            <option value="no protein">afternoon</option>
+                            <option value="poultry products">lover</option>
+                            <option value="meats">omer</option>
+                            <option value="plant products">dayer</option>
+                            <option value="dairy products">day</option>
+                        </select>
+                        <select name="cuisine" id="food11">
+                            <option value="Asian">beans</option>
+                            <option value="North American">rice</option>
+                            <option value="mediterranean">yam</option>
+                            <option value="European">yam</option>
+                            <option value="south American">night</option>
+                            <option value="japanese">night</option>
+                            <option value="fusion">night</option>
+                            <option value="north_african">night</option>
+                        </select>
+                    </div>
+                </div> -->
+                <div class="row">
+                    <div class="col-md-4">
+                        <select name="product" id="food1">
+                            <option value="2 person" class="options">plantain</option>
+                            <option value="z_amazon">rice</option>
+                            <option value="family">yam</option>
+                            <option value="add_on">ate</option>
+                        </select>
+                        <select name="heat" id="food6">
+                            <option value="optional_heat">beans</option>
+                            <option value="no_heat">rice</option>
+                            <option value="high">yam</option>
+                        </select>
+                        <div class="input-field col s12">
+                            <input type="number" name="task" class="inputfield" id="task">
+                        </div>
+                        <div class="input-field col s12">
+                            <input type="text" name="task" class="inputfield" id="task">
+                          </div>
+                    </div>
+                    <div class="col-md-4">
+                        <select name="time" id="food4">
+                            <option value="time_level_4">morning</option>
+                            <option value="time_level_5">afternoon</option>
+                            <option value="time_level_3">night</option>
+                        </select>
+                        <select name="proteins_class" id="food10">
+                            <option value="fish">morning</option>
+                            <option value="no protein">afternoon</option>
+                            <option value="poultry products">lover</option>
+                            <option value="meats">omer</option>
+                            <option value="plant products">dayer</option>
+                            <option value="dairy products">day</option>
+                        </select>
+                        <div class="input-field">
+                            <input type="text" name="task" class="inputfield" id="task">
+                          </div>
+                    </div>
+                    <div class="col-md-4">
+                        <select name="dish" id="food5">
+                            <option value="fish">beans</option>
+                            <option value="veggie">rice</option>
+                            <option value="meat">yam</option>
+                            <option value="wine_and_dessert">yam</option>
+                        </select>
+                        <select name="cuisine" id="food11">
+                            <option value="Asian">beans</option>
+                            <option value="North American">rice</option>
+                            <option value="mediterranean">yam</option>
+                            <option value="European">yam</option>
+                            <option value="south American">night</option>
+                            <option value="japanese">night</option>
+                            <option value="fusion">night</option>
+                            <option value="north_african">night</option>
+                        </select>
+                        <div class="input-field">
+                            <input type="text" name="task" class="inputfield" id="task">
+                          </div>
+                          <div class="input-field">calories
+                            <input type="text" name="task" class="inputfield" id="task" placeholder="0.0 - 999">
+                          </div>
+                    </div>
+                </div>
+                <center>
+                <button type="submit" id="predict" class="start2">Predict</button>
+                </center>
+            </form>
+            
+        </div>
+
+    </div>
+
+
+    
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+*{
+    font-family: Roboto;
+    padding: 0;
+    margin: 0;
+   }
+   button{
+       background-color: #496ECE;
+       border-radius: 5px ;
+       border: none;
+       margin: 5px;
+       padding:5px 15px;
+       font-size: 13px;
+   }
+   a:hover{
+       text-decoration: none;
+       color: #FFFFFF;
+   }
+   #navs{
+       font-size: 15px;
+       padding-right: 22px;
+       color: #496ECE;
+   }
+   .active{
+       text-decoration: underline;
+   }
+   .start, .start2{
+       color: #ECECEC;
+   
+   }
+   .start2{   
+       margin: 5px;
+       padding:25px 50px;
+       font-family: roboto;
+       font-size: 20px;
+   }
+   
+   .span1{
+       color:#496ECE;
+   }
+   .grow{
+       font-style: normal;
+       font-weight: 700px;
+       font-weight: bolder;
+       font-size: 56px;
+       line-height: 66px;
+   
+   }
+   .feature{
+       text-align: center;
+       color: #496ECE;
+       padding-bottom: 20px;
+   }
+   .iconify{
+       background-color: rgb(26, 235, 235);
+       border-radius: 200px;
+       padding: 2px;
+       width: 30px;
+       height: 30px;
+       color:#FFFFFF;
+   }
+   #iconify2{
+       background-color:#FBE075;
+       border-radius: 200px;
+       padding: 2px;
+       width: 30px;
+       height: 30px;
+       color:#FFFFFF;
+   }
+   #iconify3{
+       background-color: #FE5F55;
+       border-radius: 200px;
+       padding: 2px;
+       width: 30px;
+       height: 30px;
+       color:#FFFFFF;
+   }
+   .sales{
+       color: #111727;
+       font-size: 24px;
+       font-family: roboto;
+       font-style: normal;
+       font-weight: 700;
+       padding-top: 10px;
+   }
+   
+   .text{
+       text-align: center;
+       color: #8B93A7;
+       font-size: 16px;
+       /* font-weight: 400; */
+       font-style: normal;
+       padding-bottom: 20px;
+   }
+   
+   .feature1{
+       background: #FFFFFF;
+       box-shadow: 5px 6px 11px 3px rgba(0, 0, 0, 0.08);
+       border-radius: 6px;
+       padding-top: 20px;
+       width: 320px;
+       height: 200px;
+       margin-bottom: 100px;
+   }
+   .footer{
+       background-color: #496ECE;
+       
+       
+       
+       
+   }
+   .footerpic{
+       color: white;
+       text-align: center;
+   }
+   .footer-pic{
+       justify-content: space-between;
+       align-self: flex-end;
+   }
+   
+   
+   .footer-text{
+       font-family: Roboto;
+   font-style: normal;
+   font-weight: normal;
+   font-size: 16px;
+   color: #FFFFFF;
+   padding-top: 80px;
+   }
+   
+   .app, .terms{
+       display: flex;
+       flex-direction: row;
+       margin-top: 20px;
+   }
+   .terms{
+       justify-content: space-around;
+       color: #FFFFFF;
+       font-family: roboto;
+       font-style: normal;
+       font-weight: 400;
+       
+   }
+   .copyright, .terms{
+       margin-top: 40px;
+       
+   }
+   

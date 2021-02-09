@@ -1,0 +1,115 @@
+*{
+    font-family: Roboto;
+    padding: 0;
+    margin: 0;
+   }
+  .sidebar {
+      width: 280px;
+      background-color: #ffffff;
+      position: fixed;
+      height: 100%;
+      overflow: auto;
+    }
+    
+    .sidebar a {
+      padding:5px 15px;
+      font-size: 13px;
+      display: block;
+      padding: 20px;
+      text-decoration: none;
+    }
+     
+    .sidebar a.active {
+      background-color: #496ece;
+      color: white;
+    }
+    div.content {
+      background-color: #E5E5E5;
+      margin-left: 280px;
+      padding: 1px 16px;
+      height: 100%;
+      justify-content: center;
+    }
+    select{
+      color: #496ECE;
+      padding: 0 15px;   
+    }
+  
+    .sales{
+    text-align: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    color: #111727;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    }
+  
+    select{
+      width: 300px;
+      height: 56px;
+      background: #FFFFFF;
+      border: #ffffff;
+      box-shadow: 0px 2px 7px -3px rgba(0, 0, 0, 0.3);
+      border-radius: 8px;
+      margin: 20px;
+    }
+    button{
+      background-color: #496ECE;
+      border-radius: 5px ;
+      border: none;
+      /* margin: 5px;
+      padding:5px 15px;
+      font-family: roboto;
+      font-size: 13px; */
+  }
+  button:focus{
+      outline: none;
+  }
+    .start2{ 
+      margin: 5px;
+      padding:25px 50px;
+      font-family: roboto;
+      font-size: 20px;
+      color: #ECECEC;
+      text-decoration: none;
+  }
+  .start2:hover{
+      text-decoration: none;
+  }
+  .inputfield{
+    background-color: #E5E5E5;
+    border: none;
+    border-bottom: 1px solid #9e9e9e;
+    border-radius: 0;
+    outline: none;
+    height: 3rem;
+    width: 100%;
+      margin: 0 0 30px 0;
+      padding: 0;
+      /* -webkit-box-shadow: none;
+      box-shadow: none;
+      -webkit-box-sizing: content-box;
+      box-sizing: content-box; */
+  }
+  /* #predict{
+      padding-bottom: 500px;
+  }
+     */
+    @media screen and (max-width: 700px) {
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+      .sidebar a {float: left;}
+      div.content {margin-left: 0;}
+    }
+    
+    @media screen and (max-width: 400px) {
+      .sidebar a {
+        text-align: center;
+        float: none;
+      }
+    }
+  
