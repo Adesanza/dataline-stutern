@@ -67,8 +67,8 @@
       outline: none;
   }
     .start2{ 
-      margin: 5px;
-      padding:25px 50px;
+      margin-bottom: 30px;
+      padding:10px 60px;
       font-family: roboto;
       font-size: 20px;
       color: #ECECEC;
@@ -92,10 +92,6 @@
       -webkit-box-sizing: content-box;
       box-sizing: content-box; */
   }
-  /* #predict{
-      padding-bottom: 500px;
-  }
-     */
     @media screen and (max-width: 700px) {
       .sidebar {
         width: 100%;

@@ -3,6 +3,11 @@
     padding: 0;
     margin: 0;
    }
+   .bg-img{
+       background-image: url("https://res.cloudinary.com/adesanza/image/upload/v1611586830/BlobBlob_1_hsm521.svg");
+       background-repeat: no-repeat;
+       background-size: cover;
+   }
    button{
        background-color: #496ECE;
        border-radius: 5px ;
