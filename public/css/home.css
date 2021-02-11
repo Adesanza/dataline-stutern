@@ -127,24 +127,42 @@
    padding-top: 80px;
    }
    
-   .app, .terms{
+   .app{
        display: flex;
        flex-direction: row;
        margin-top: 20px;
+       padding-right: 1.12rem;
        /* justify-content: flex-end; */
    }
    .terms{
-       justify-content: space-around;
-       width: 70%;
+       /* border: 1px solid red; */
+       display: flex;
+       flex-flow: row nowrap;
+       justify-content: flex-end;
+       /* width: 90%; */
+       /* margin-left: 20%; */
        color: #FFFFFF;
        font-family: roboto;
        font-style: normal;
        font-weight: 400;
+       margin: 0;
+   }
+   .terms > h6 {
+       margin-left: 2.778rem;
+   }
+   .terms > h6:last-child{
+       margin-left: 4.56rem;
    }
    .copyright{
        margin-top: 40px;
        
    }
+   .subscribe-area{
+    display: flex;
+    flex-flow: row nowrap;
+    /* justify-content: space-around; */
+    /* border: 1px solid red; */
+}
    .inputfield{
        color: white;
     background-color: #496ece;
@@ -153,14 +171,76 @@
     border-radius: 0;
     outline: none;
     height: 2rem;
-    width: 100%;
-    /* margin: 0 0 30px 0; */
+    flex-basis: 70%;
+    margin-right: 2rem;
      padding: 0;
   }
+.subscribe-area > button {
+    padding: 0.36rem 2rem;
+    background-color: white;
+    color: black;
+    flex-basis: 30%;
+}
+  
   ::placeholder {
     color: white;
   }
   .news{
       color: #ECECEC;
   }
-  
+  @media(max-width:1000px){
+      .footer {
+          padding-left: 2rem;
+          padding-right: 2rem;
+      }
+      .terms {
+          justify-content: space-between;
+      }
+      .terms > h6 {
+          margin-left: 0;
+      }
+  }
+  @media(max-width:500px){
+      .newsletter{
+          text-align: center;
+      }
+      .dataline-footer{
+          text-align: center;
+      }
+      .app{
+          width: 100%;
+          justify-content: space-between;
+      }
+      .terms {
+          width: 100%;
+          margin-top: 1rem;
+          justify-content: center;
+      }
+      .footer{
+        padding: 1rem;
+        
+    }
+      .terms > h6 {
+        margin-left: .778rem;
+    }
+    .terms > h6:last-child{
+        margin-left: 1.56rem;
+    }
+    .news{
+        text-align: center;
+    }
+  }
+​
+@media(max-width:374px){
+    .terms > h6 {
+      margin-left: .478rem;
+      font-size: .89rem;
+    }
+}
+  .terms > h6:last-child{
+      margin-left: .86rem;
+  }
+  .inputfield{
+      width: 70%;
+  }
+}
