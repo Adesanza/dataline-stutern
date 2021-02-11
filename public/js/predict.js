@@ -38,7 +38,7 @@ form.addEventListener('submit', async(e) => {
         cuisine
     };
      try {
-        const result = await fetch('http://localhost:3000/submit', {
+        const result = await fetch('https://dataline-stutern.herokuapp.com/submit', {
             headers: {
                'Accept': 'application/json, text/plain, */*',
                'Content-Type': 'application/json'
