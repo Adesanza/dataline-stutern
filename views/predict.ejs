@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/css/predict.css">
 </head>
 <body>
+   
     <nav class="navbar navbar-expand-sm bg-light navbar-light fixed">
         <a href="/"> <img src="https://res.cloudinary.com/adesanza/image/upload/v1611150220/datalinelogo_ml1ufh.svg" alt="" height="50px"> </a>
     </nav>
@@ -25,86 +26,83 @@
                 <div class="row">
                     <div class="col-12 col-lg-4">
                         <select name="product" id="product">
-                            <option value="2 person" class="options">plantain</option>
-                            <option value="z_amazon">rice</option>
-                            <option value="family">yam</option>
-                            <option value="add_on">ate</option>
+                            <option value="2 person" class="options">Two Person</option>
+                            <option value="z_amazon">Single Serving</option>
+                            <option value="family">Family Serving</option>
+
                         </select>
                     </div>
                     <div class="col-12 col-lg-4">
                         <select name="heat" id="heat">
-                            <option value="optional_heat">beans</option>
-                            <option value="no_heat">rice</option>
-                            <option value="high">yam</option>
+                            <option value="optional_heat">Medium Heat</option>
+                            <option value="no_heat">No Heat</option>
+                            <option value="high">High Heat</option>
                         </select>
                     </div>
                     <div class="col-12 col-lg-4">
                         <select name="cooking" id="cooking">
-                            <option value="time_level_4">morning</option>
-                            <option value="time_level_5">afternoon</option>
-                            <option value="time_level_3">night</option>
+                            <option value="time_level_4">15Mins- 45Mins</option>
+                            <option value="time_level_5">45Mins and Above</option>
+                            <option value="time_level_3">0 - 15Mins</option>
                         </select>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12 col-lg-4">
+                        <select name="protein-class" id="protein-class">
+                            <option value="fish">Fish</option>
+                            <option value="no protein">No Protein</option>
+                            <option value="poultry products">Poultry Products</option>
+                            <option value="meats">Meat</option>
+                            <option value="plant products">Plant Products</option>
+                            <option value="dairy products">Dairy Products</option>
+                        </select>
+                    </div>
+                    <div class="col-12 col-lg-4">
                         <select name="dish" id="dish">
-                            <option value="fish">morning</option>
-                            <option value="no protein">afternoon</option>
-                            <option value="poultry products">lover</option>
-                            <option value="meats">omer</option>
-                            <option value="plant products">dayer</option>
-                            <option value="dairy products">day</option>
+                            <option value="veggie">Vegetables</option>
+                            <option value="fish">Fish</option>
+                            <option value="meat">Meat</option>
                         </select>
                     </div>
                     <div class="col-12 col-lg-4">
                         <select name="cuisine" id="cuisine">
-                            <option value="fish">beans</option>
-                            <option value="veggie">rice</option>
-                            <option value="meat">yam</option>
-                            <option value="wine_and_dessert">yam</option>
-                        </select>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                        <select name="protein" id="protein-class">
-                            <option value="Asian">beans</option>
-                            <option value="North American">rice</option>
-                            <option value="mediterranean">yam</option>
-                            <option value="European">yam</option>
-                            <option value="south American">night</option>
-                            <option value="japanese">night</option>
-                            <option value="fusion">night</option>
-                            <option value="north_african">night</option>
+                            <option value="Asian">Asian</option>
+                            <option value="North American">North American</option>
+                            <option value="European">European</option>
+                            <option value="south American">South American</option>
+                            <option value="japanese">Japanese</option>
+                            <option value="north_african">North African</option>
                         </select>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12 col-lg-4">
-                        <div class="input-field">Calories
-                            <input type="number" name="task" class="inputfield" id="calories" placeholder="0.0 - 999" required>
+                        <div class="input-field">Calories (Kj)
+                            <input type="number" name="task" class="inputfield" id="calories" placeholder="0 - 2000" required>
                         </div>
                         
                     </div>
                     <div class="col-12 col-lg-4">
-                        <div class="input-field">Carbs
-                            <input type="number" name="task" class="inputfield" id="carbs" placeholder="0.0 - 999" required>
+                        <div class="input-field">Carbs (g)
+                            <input type="number" name="task" class="inputfield" id="carbs" placeholder="0 - 500" required>
                           </div>
                     </div>
                     <div class="col-12 col-lg-4">
-                        <div class="input-field ">Fat
-                            <input type="number" name="fat" class="inputfield" id="fat" placeholder="0.0 - 999" required>
+                        <div class="input-field">Fat (g)
+                            <input type="number" name="fat" class="inputfield" id="fat" placeholder="0.0 - 300" required>
                           </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
                         <div class="input-field">Number of Ingredients
-                            <input type="number" name="Ingredients" class="inputfield" id="ingredients" placeholder="0 - 999" required>
+                            <input type="number" name="Ingredients" class="inputfield" id="ingredients" placeholder="0 - 11" required>
                           </div>
                     </div>
                     <div class="col-md-6">
                         <div class="input-field">Protein
-                            <input type="number" name="protein" class="inputfield" id="protein" placeholder="0.0 - 999" required>
+                            <input type="number" name="protein" class="inputfield" id="protein" placeholder="0.0 - 400" required>
                           </div>
                     </div>
                 </div>
@@ -114,13 +112,25 @@
             </form>
             
         </div>
-
+        
+ 
     </div>
+    <!-- MODAL -->
+ <div class="modal fade" id="predictModal" tabindex="-1" aria-labelledby="predictModal" aria-hidden="true" data-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered" >
+        <div class="modal-content">
+            <div class="modal-body" id="modalBody">
+                
+            </div>
+            
+          </div>
+      </div>
+</div>
+<!-- END OF MODAL -->
 
 
     
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-
     <script src="/js/predict.js"></script>
 </body>
 </html>

@@ -33,19 +33,19 @@ app.post('/submit', async(req, res, next) => {
 
     const items = {
         product: req.body.product,
-        calories: req.body.calories || Math.random() * 2022,
-        carbs: req.body.carbs || Math.random() * 5022,
+        calories: Number(req.body.calories),
+        carbs: Number(req.body.carbs),
         time: req.body.time,
         dish: req.body.dish,
         heat: req.body.heat,
-        fat: req.body.fat || Math.random() * 15022,
-        no_ingredients: req.body.no_ingredients || Math.random() * 524722,
-        proteins: req.body.proteins || Math.random() * 128022,
+        fat: Number(req.body.fat),
+        no_ingredients: Number(req.body.no_ingredients),
+        proteins: Number(req.body.proteins),
         protein_class: req.body.protein_class,
         cuisine: req.body.cuisine
 
     };
-
+    
 
     const result = await axios.post('https://restaurant-api-sales.herokuapp.com/predict',JSON.stringify(items), {
         headers: {
@@ -53,13 +53,13 @@ app.post('/submit', async(req, res, next) => {
             "Accept": "application/json"
         }
     })
-    // console.log(result)
+    console.log(result.data)
     res.json(result.data)
 })
 
 const PORT = process.env.PORT || 3000;
 
-app.listen(PORT,()=>console.log(`Server is hot @ ${PORT}`))
+app.listen(PORT,()=>console.log(`Dataline is hot @ ${PORT}`))
 
 module.exports = app;
 

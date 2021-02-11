@@ -3,11 +3,6 @@
     padding: 0;
     margin: 0;
    }
-   .bg-img{
-       background-image: url("https://res.cloudinary.com/adesanza/image/upload/v1611586830/BlobBlob_1_hsm521.svg");
-       background-repeat: no-repeat;
-       background-size: cover;
-   }
    button{
        background-color: #496ECE;
        border-radius: 5px ;
@@ -108,7 +103,7 @@
    }
    .footer{
        background-color: #496ECE;
-       
+       padding: 1rem 7rem 0;
        
        
        
@@ -136,16 +131,17 @@
        display: flex;
        flex-direction: row;
        margin-top: 20px;
+       /* justify-content: flex-end; */
    }
    .terms{
        justify-content: space-around;
+       width: 70%;
        color: #FFFFFF;
        font-family: roboto;
        font-style: normal;
        font-weight: 400;
-       
    }
-   .copyright, .terms{
+   .copyright{
        margin-top: 40px;
        
    }

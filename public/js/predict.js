@@ -1,3 +1,8 @@
+let predictModal = new bootstrap.Modal(document.getElementById('predictModal'), {
+    keyboard: false
+  })
+let modalBody = document.getElementById("modalBody");
+// predictModal.show();
 const form = document.querySelector('#myForm');
 const predictBtn = document.getElementById("predict");
 form.addEventListener('submit', async(e) => {
@@ -46,13 +51,45 @@ form.addEventListener('submit', async(e) => {
         const data = await result.json();
         console.log(data)
         if(data.pred > 500){
-           alert("High Sales")
+            modalBody.innerHTML = `<center>
+            <p class="results">Results</p>
+            <img src="https://res.cloudinary.com/adesanza/image/upload/v1612962679/Group_150_fifybp.svg" alt="" height="200px" width="300px">
+            <p class="increased">Increased sales Predicted</p>
+            <p class="recommend">Recommendations</p>
+            <p class="stock"><span class="iconify" data-icon="teenyicons:tick-circle-solid" data-inline="false"></span> Stock up on low inventories for the week</p>
+            <p class="stock"><span class="iconify" data-icon="teenyicons:tick-circle-solid" data-inline="false"></span> Increase Staff engagement</p>
+            <div>
+                <button type="button" class="btn text-center go-back" data-dismiss="modal">Go Back</button>
+            </div>
+        </center>`
+            predictModal.show();
        }else{
-           alert("Low Sales")
+             modalBody.innerHTML =`<center>
+             <p class="results">Results</p>
+             <img src="https://res.cloudinary.com/adesanza/image/upload/v1612962740/low_sales_zmrpyz.svg" alt="" height="200px" width="300px">
+             <p class="increased text-danger">Low Sales Predicted!</p>
+             <p class="recommend">Recommendations</p>
+             <p class="stock text-danger"><span class="iconify" data-icon="teenyicons:tick-circle-solid" data-inline="false"></span> No need to stock up for the week</p>
+             <p class="stock text-danger"><span class="iconify" data-icon="teenyicons:tick-circle-solid" data-inline="false"></span> Decrease staff engagement</p>
+             <div>
+                 <button type="button" class="btn text-center go-back" data-dismiss="modal">Go Back</button>
+             </div>
+         </center>`
+            predictModal.show();
        }
        predictBtn.innerHTML = "Predict";
     predictBtn.disabled = false;
-    document.getElementById("product").value = "family"
+    document.getElementById('product').value = "2 person"
+    document.getElementById('heat').value = "optional_heat"
+    document.getElementById('cooking').value = "time_level_4"
+    document.getElementById('dish').value = "veggie"
+    document.getElementById('protein-class').value = "fish"
+    document.getElementById('cuisine').value = "Asian"
+    document.getElementById('calories').value = ""
+    document.getElementById('carbs').value = ""
+    document.getElementById('fat').value = ""
+    document.getElementById('ingredients').value = ""
+    document.getElementById('protein').value = "";
      } catch (error) {
          console.log(error)
          console.log("something broke")
