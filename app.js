@@ -53,7 +53,7 @@ app.post('/submit', async(req, res, next) => {
             "Accept": "application/json"
         }
     })
-    console.log(result.data)
+    // console.log(result.data)
     res.json(result.data)
 })
 
